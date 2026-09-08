@@ -25,9 +25,15 @@ def calculate_bulk_discount(quantity):
     return 0
 
 
+def calculate_loyalty_discount(is_loyalty_member):
+    """Return the loyalty-discount percentage."""
+    return 5 if is_loyalty_member else 0
+
+
+
 def calculate_final_price(price, quantity, discount_pct=0):
     """Return the final price for `quantity` units of `price`, including
-    manual + bulk discounts and sales tax.
+    manual + bulk and discounts and sales tax.
     """
     subtotal = price * quantity
     bulk_pct = calculate_bulk_discount(quantity)
