@@ -22,4 +22,4 @@ def calculate_order_total(order):
 
 def format_receipt(order, total):
     """Return a one-line receipt string for an order."""
-    return f"{order['sku']}: {total}"
+    return f"{order['sku']}: ${total:.2f}"
