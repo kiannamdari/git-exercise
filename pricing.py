@@ -20,6 +20,6 @@ def calculate_final_price(price, quantity, discount_pct=0):
     """
     subtotal = price * quantity
     discount_amount = subtotal * discount_pct / 100
-    discounted = subtotal + discount_amount
+    discounted = subtotal - discount_amount
     tax = calculate_tax(discounted)
     return discounted + tax
